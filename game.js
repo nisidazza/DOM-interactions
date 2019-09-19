@@ -19,19 +19,28 @@ function bindEventListeners (dots) {
 
 function makeGreen (evt) {
   evt.preventDefault()
-  evt.target.classList.toggle('green')
+  var classes = evt.target.classList
+  classes.remove('blue')
+  classes.remove('invisible')
+  classes.toggle('green')
   updateCounts()
 }
 
 // CREATE FUNCTION makeBlue HERE
 function makeBlue(evt) {
-  evt.target.classList.toggle('blue')
+  var classes = evt.target.classList
+  classes.remove('green')
+  classes.remove('invisible')
+  classes.toggle('blue')
   updateCounts()
 }
 
 // CREATE FUNCTION hide HERE
 function hide(evt) {
-  evt.target.classList.toggle('invisible')
+  var classes = evt.target.classList
+  classes.remove('blue')
+  classes.remove('green')
+  classes.toggle('invisible')
   updateCounts()
 }
 
