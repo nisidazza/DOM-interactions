@@ -22,6 +22,10 @@ function makeGreen (evt) {
 }
 
 // CREATE FUNCTION makeBlue HERE
+function makeBlue(evt) {
+  evt.preventDefault()
+  evt.target.classList.toggle('blue')
+}
 
 // CREATE FUNCTION hide HERE
 
